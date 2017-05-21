@@ -1,0 +1,9 @@
+INSERT INTO rmp_rating (date, description, overall_quality, level_of_difficulty, class_name,
+  for_credit, attendance, text_book_used, would_take_again, grade_received, rating_text,
+  found_helpful, found_unhelpful, professor_id) VALUES ('some-date', 'some-description', 5, 5, 'cs 241',
+  'yes', 'mandatory', 'yes', 'yes', 'A', 'He was a cool professor', 5, 0, 22);
+
+INSERT INTO rmp_professor (overall_quality, level_of_difficulty, would_take_again, name, school)
+VALUES (4.4,3.4,3.2, 'Yu Sun', 'California State Polytechnic University, Pomona');
+
+INSERT INTO rmp_tag (rating_id, text) VALUES (22, 'funny');
