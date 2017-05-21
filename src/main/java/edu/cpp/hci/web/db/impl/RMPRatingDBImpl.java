@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RMPRatingDBImpl implements RMPRatingDB{
+public class RMPRatingDBImpl implements RMPRatingDB {
 
     @Autowired
     private RMPRatingRepository rmpRatingRepository;

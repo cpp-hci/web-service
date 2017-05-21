@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface RMPTagDB {
     List<String> getTags(Integer ratingId);
+
     List<RMPTagEntity> putTags(List<String> tags, Integer ratingId);
 }

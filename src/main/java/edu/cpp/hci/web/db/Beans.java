@@ -10,17 +10,17 @@ import org.springframework.context.annotation.Configuration;
 public class Beans {
 
     @Bean
-    public RMPTagDB tagDB(){
+    public RMPTagDB tagDB() {
         return new RMPTagDBImpl();
     }
 
     @Bean
-    public RMPRatingDB ratingDB(){
+    public RMPRatingDB ratingDB() {
         return new RMPRatingDBImpl();
     }
 
     @Bean
-    public RMPProfessorDB professorDB(){
+    public RMPProfessorDB professorDB() {
         return new RMPProfessorDBImpl();
     }
 }

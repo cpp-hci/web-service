@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RMPProfessorDBImpl implements RMPProfessorDB{
+public class RMPProfessorDBImpl implements RMPProfessorDB {
 
 
     private Logger log = Logger.getLogger(RMPProfessorDBImpl.class);

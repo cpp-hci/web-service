@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HealthCheckController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody String healthcheck(){
+    public @ResponseBody String healthcheck() {
         return "Working!!";
     }
 }

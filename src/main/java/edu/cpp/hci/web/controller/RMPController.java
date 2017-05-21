@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/api/rmp")
@@ -59,7 +58,7 @@ public class RMPController {
     public @ResponseBody List<RMPProfessorDTO> professor(@RequestParam(value = "name") String name,
                                     @RequestParam(value = "school") String school) {
         log.info("RMP Professor request: " + name + ", " + school);
-        List<RMPProfessorDTO> allByNameAndSchool = professorDB.getProfessorsByNameAndSchool(name,school);
+        List<RMPProfessorDTO> allByNameAndSchool = professorDB.getProfessorsByNameAndSchool(name, school);
         if (allByNameAndSchool.size() > 0) {
             log.info("Found professor info on DB, using cached results: " + allByNameAndSchool.toString());
             return allByNameAndSchool;
