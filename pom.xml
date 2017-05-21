@@ -45,22 +45,12 @@
         <dependency>
             <groupId>com.github.cpp-hci</groupId>
             <artifactId>scrapers</artifactId>
-            <version>v1.02</version>
+            <version>v1.03</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.data</groupId>-->
-        <!--<artifactId>spring-data-commons</artifactId>-->
-        <!--<version>1.13.3.RELEASE</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.data</groupId>-->
-        <!--<artifactId>spring-data-jpa</artifactId>-->
-        <!--<version>1.11.3.RELEASE</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
