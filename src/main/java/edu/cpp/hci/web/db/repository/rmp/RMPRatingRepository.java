@@ -1,4 +1,4 @@
-package edu.cpp.hci.web.repository.rmp;
+package edu.cpp.hci.web.db.repository.rmp;
 
 import edu.cpp.hci.web.entity.RMPRatingEntity;
 import org.springframework.data.repository.Repository;
