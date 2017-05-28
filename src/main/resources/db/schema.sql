@@ -44,3 +44,28 @@ CREATE TABLE IF NOT EXISTS rmp_tag (
   text      VARCHAR(30)
 )
   ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS koofers_professor;
+CREATE TABLE IF NOT EXISTS koofers_professor (
+  id                  INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name                VARCHAR(30),
+  period              VARCHAR(30),
+  school              BLOB,
+  department          VARCHAR(30),
+  overall_rating      DOUBLE,
+  overall_gpa         DOUBLE
+)
+  ENGINE = InnoDB;
+
+DROP TABLE IF EXISTS koofers_rating;
+CREATE TABLE IF NOT EXISTS koofers_rating (
+  id                  INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  course_number       VARCHAR(30),
+  course_name         VARCHAR(30),
+  period              VARCHAR(30),
+  overall_rating      DOUBLE,
+  overall_gpa         DOUBLE,
+  review_text         BLOB,
+  professor_id        INTEGER
+)
+  ENGINE = InnoDB;

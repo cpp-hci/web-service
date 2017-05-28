@@ -1,4 +1,6 @@
-package edu.cpp.hci.web.entity;
+package edu.cpp.hci.web.entity.rmp;
+
+import edu.cpp.hci.web.entity.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

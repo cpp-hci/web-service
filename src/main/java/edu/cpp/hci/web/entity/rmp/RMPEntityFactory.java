@@ -1,11 +1,11 @@
-package edu.cpp.hci.web.entity;
+package edu.cpp.hci.web.entity.rmp;
 
 import edu.cpp.hci.scrapers.rmp.model.professor.RMPProfessorDTO;
 import edu.cpp.hci.scrapers.rmp.model.professor.impl.RMPProfessor;
 import edu.cpp.hci.scrapers.rmp.model.rating.RMPRatingDTO;
 import edu.cpp.hci.scrapers.rmp.model.rating.impl.RMPRating;
 
-public class EntityFactory {
+public class RMPEntityFactory {
     public static RMPRatingEntity toEntity(RMPRatingDTO dto, Integer professorId) {
         RMPRatingEntity rmpRatingEntity = new RMPRatingEntity();
         rmpRatingEntity.setAttendance(dto.getAttendance());

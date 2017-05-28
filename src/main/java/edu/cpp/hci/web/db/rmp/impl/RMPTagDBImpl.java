@@ -1,8 +1,8 @@
-package edu.cpp.hci.web.db.impl;
+package edu.cpp.hci.web.db.rmp.impl;
 
-import edu.cpp.hci.web.db.RMPTagDB;
-import edu.cpp.hci.web.db.repository.rmp.RMPTagRepository;
-import edu.cpp.hci.web.entity.RMPTagEntity;
+import edu.cpp.hci.web.db.rmp.RMPTagDB;
+import edu.cpp.hci.web.db.rmp.repository.RMPTagRepository;
+import edu.cpp.hci.web.entity.rmp.RMPTagEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;

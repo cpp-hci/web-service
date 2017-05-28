@@ -1,6 +1,6 @@
-package edu.cpp.hci.web.db.repository.rmp;
+package edu.cpp.hci.web.db.rmp.repository;
 
-import edu.cpp.hci.web.entity.RMPProfessorEntity;
+import edu.cpp.hci.web.entity.rmp.RMPProfessorEntity;
 import org.springframework.data.repository.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

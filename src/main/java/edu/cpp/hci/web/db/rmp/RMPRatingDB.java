@@ -1,4 +1,4 @@
-package edu.cpp.hci.web.db;
+package edu.cpp.hci.web.db.rmp;
 
 
 import edu.cpp.hci.scrapers.rmp.model.rating.RMPRatingDTO;

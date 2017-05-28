@@ -45,7 +45,7 @@
         <dependency>
             <groupId>com.github.cpp-hci</groupId>
             <artifactId>scrapers</artifactId>
-            <version>v1.03</version>
+            <version>0a7ad2ca37</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,6 +1,6 @@
-package edu.cpp.hci.web.db;
+package edu.cpp.hci.web.db.rmp;
 
-import edu.cpp.hci.web.entity.RMPTagEntity;
+import edu.cpp.hci.web.entity.rmp.RMPTagEntity;
 
 import java.util.List;
 
