@@ -36,7 +36,8 @@ public class RMPController {
     private RMPRatingDB ratingDB;
 
     @RequestMapping(method = RequestMethod.GET, path = "/scrape")
-    public @ResponseBody List<RMPProfessorDTO> scrape(@RequestParam(value = "name") String name, @RequestParam(value = "school") String school) {
+    public @ResponseBody
+    List<RMPProfessorDTO> scrape(@RequestParam(value = "name") String name, @RequestParam(value = "school") String school) {
         log.info("RMP scrape request: " + name + " " + school);
         RateMyProfessorWebScaper rateMyProfessorWebScaper = new RateMyProfessorWebScaper(name, school);
         try {
@@ -50,13 +51,15 @@ public class RMPController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/rating")
-    public @ResponseBody List<RMPRatingDTO> rating(@RequestParam(value = "professorId") Integer professorId) {
+    public @ResponseBody
+    List<RMPRatingDTO> rating(@RequestParam(value = "professorId") Integer professorId) {
         log.info("RMP Review request: " + professorId);
         return ratingDB.getRatings(professorId);
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/professor")
-    public @ResponseBody List<RMPProfessorDTO> professor(@RequestParam(value = "name") String name,
+    public @ResponseBody
+    List<RMPProfessorDTO> professor(@RequestParam(value = "name") String name,
                                     @RequestParam(value = "school") String school) {
         log.info("RMP Professor request: " + name + ", " + school);
         List<RMPProfessorDTO> allByNameAndSchool = professorDB.getProfessorsByNameAndSchool(name, school);
@@ -69,7 +72,8 @@ public class RMPController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/tag")
-    public @ResponseBody List<String> tag(@RequestParam(value = "ratingId") Integer ratingId) {
+    public @ResponseBody
+    List<String> tag(@RequestParam(value = "ratingId") Integer ratingId) {
         log.info("RMP Tag request: " + ratingId);
         return tagDB.getTags(ratingId);
     }

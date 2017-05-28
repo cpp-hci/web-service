@@ -6,7 +6,7 @@ import edu.cpp.hci.scrapers.koofers.model.rating.KoofersRatingDTO;
 import edu.cpp.hci.scrapers.koofers.model.rating.impl.KoofersRating;
 
 public class KoofersEntityFactory {
-    public static KoofersProfessorEntity toEntity(KoofersProfessorDTO professorDTO){
+    public static KoofersProfessorEntity toEntity(KoofersProfessorDTO professorDTO) {
         KoofersProfessorEntity koofersProfessorEntity = new KoofersProfessorEntity();
         koofersProfessorEntity.setName(professorDTO.getName());
         koofersProfessorEntity.setDepartment(professorDTO.getDepartment());
@@ -17,7 +17,7 @@ public class KoofersEntityFactory {
         return koofersProfessorEntity;
     }
 
-    public static KoofersRatingEntity toEntity(KoofersRatingDTO ratingDTO, Integer professorId){
+    public static KoofersRatingEntity toEntity(KoofersRatingDTO ratingDTO, Integer professorId) {
         KoofersRatingEntity koofersRatingEntity = new KoofersRatingEntity();
         koofersRatingEntity.setOverallRating(ratingDTO.getOverallGPA());
         koofersRatingEntity.setOverallGpa(ratingDTO.getOverallRating());
@@ -29,7 +29,7 @@ public class KoofersEntityFactory {
 
     }
 
-    public static KoofersRatingDTO toDto(KoofersRatingEntity entity){
+    public static KoofersRatingDTO toDto(KoofersRatingEntity entity) {
         KoofersRatingDTO koofersRating = new KoofersRating();
         koofersRating.setPeriod(entity.getPeriod());
         koofersRating.setOverallGPA(entity.getOverallGpa());
@@ -40,7 +40,7 @@ public class KoofersEntityFactory {
         return koofersRating;
     }
 
-    public static KoofersProfessorDTO toDto(KoofersProfessorEntity entity){
+    public static KoofersProfessorDTO toDto(KoofersProfessorEntity entity) {
         KoofersProfessor koofersProfessor = new KoofersProfessor();
         koofersProfessor.setName(entity.getName());
         koofersProfessor.setDepartment(entity.getDepartment());

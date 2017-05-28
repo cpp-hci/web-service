@@ -1,26 +1,19 @@
 package edu.cpp.hci.web.db.koofers.impl;
 
 import edu.cpp.hci.scrapers.koofers.model.professor.KoofersProfessorDTO;
-import edu.cpp.hci.scrapers.koofers.model.rating.KoofersRatingDTO;
-import edu.cpp.hci.scrapers.rmp.model.professor.RMPProfessorDTO;
 import edu.cpp.hci.web.db.koofers.KoofersProfessorDB;
 import edu.cpp.hci.web.db.koofers.KoofersRatingDB;
 import edu.cpp.hci.web.db.koofers.repository.KoofersProfessorRepository;
-import edu.cpp.hci.web.db.rmp.RMPRatingDB;
 import edu.cpp.hci.web.db.rmp.impl.RMPProfessorDBImpl;
-import edu.cpp.hci.web.db.rmp.repository.RMPProfessorRepository;
 import edu.cpp.hci.web.entity.koofers.KoofersEntityFactory;
 import edu.cpp.hci.web.entity.koofers.KoofersProfessorEntity;
-import edu.cpp.hci.web.entity.rmp.RMPEntityFactory;
-import edu.cpp.hci.web.entity.rmp.RMPProfessorEntity;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class KoofersProfessorDBImpl implements KoofersProfessorDB{
+public class KoofersProfessorDBImpl implements KoofersProfessorDB {
     private Logger log = Logger.getLogger(RMPProfessorDBImpl.class);
 
     @Autowired

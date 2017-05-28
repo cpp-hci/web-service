@@ -1,7 +1,6 @@
 package edu.cpp.hci.web.db.koofers.impl;
 
 import edu.cpp.hci.scrapers.koofers.model.rating.KoofersRatingDTO;
-import edu.cpp.hci.web.controller.RMPController;
 import edu.cpp.hci.web.db.koofers.KoofersRatingDB;
 import edu.cpp.hci.web.db.koofers.repository.KoofersRatingRepository;
 import edu.cpp.hci.web.entity.koofers.KoofersEntityFactory;
@@ -28,7 +27,7 @@ public class KoofersRatingDBImpl implements KoofersRatingDB {
     @Override
     public List<KoofersRatingDTO> putRatings(List<KoofersRatingDTO> ratings, Integer professorId) {
         return ratings.stream()
-            .map(e -> KoofersEntityFactory.toEntity(e,professorId))
+            .map(e -> KoofersEntityFactory.toEntity(e, professorId))
             .map(e -> ratingRepository.save(e))
             .map(KoofersEntityFactory::toDto)
             .collect(Collectors.toList());

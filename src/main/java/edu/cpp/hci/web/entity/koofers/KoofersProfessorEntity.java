@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "koofers_professor")
-public class KoofersProfessorEntity extends BaseEntity{
+public class KoofersProfessorEntity extends BaseEntity {
 
     @Column
     private String name;
@@ -27,6 +27,20 @@ public class KoofersProfessorEntity extends BaseEntity{
 
     @Column
     private double overallGpa;
+
+    public KoofersProfessorEntity() {
+
+    }
+
+    public KoofersProfessorEntity(String name, String period, String school, String department, double overallRating, double overallGpa) {
+
+        this.name = name;
+        this.period = period;
+        this.school = school;
+        this.department = department;
+        this.overallRating = overallRating;
+        this.overallGpa = overallGpa;
+    }
 
     public String getName() {
         return name;
@@ -73,20 +87,6 @@ public class KoofersProfessorEntity extends BaseEntity{
     }
 
     public void setOverallGpa(double overallGpa) {
-        this.overallGpa = overallGpa;
-    }
-
-    public KoofersProfessorEntity() {
-
-    }
-
-    public KoofersProfessorEntity(String name, String period, String school, String department, double overallRating, double overallGpa) {
-
-        this.name = name;
-        this.period = period;
-        this.school = school;
-        this.department = department;
-        this.overallRating = overallRating;
         this.overallGpa = overallGpa;
     }
 }
