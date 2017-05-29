@@ -19,14 +19,14 @@ public class KoofersEntityFactory {
 
     public static KoofersRatingEntity toEntity(KoofersRatingDTO ratingDTO, Integer professorId) {
         KoofersRatingEntity koofersRatingEntity = new KoofersRatingEntity();
-        koofersRatingEntity.setOverallRating(ratingDTO.getOverallGPA());
-        koofersRatingEntity.setOverallGpa(ratingDTO.getOverallRating());
+        koofersRatingEntity.setOverallGpa(ratingDTO.getOverallGPA());
+        koofersRatingEntity.setOverallRating(ratingDTO.getOverallRating());
         koofersRatingEntity.setCourseName(ratingDTO.getCourseName());
+        koofersRatingEntity.setCourseNumber(ratingDTO.getCourseNumber());
         koofersRatingEntity.setPeriod(ratingDTO.getPeriod());
         koofersRatingEntity.setReviewText(ratingDTO.getReviewText());
         koofersRatingEntity.setProfessorId(professorId);
         return koofersRatingEntity;
-
     }
 
     public static KoofersRatingDTO toDto(KoofersRatingEntity entity) {
@@ -35,6 +35,7 @@ public class KoofersEntityFactory {
         koofersRating.setOverallGPA(entity.getOverallGpa());
         koofersRating.setOverallRating(entity.getOverallRating());
         koofersRating.setCourseName(entity.getCourseName());
+        koofersRating.setCourseNumber(entity.getCourseNumber());
         koofersRating.setPeriod(entity.getPeriod());
         koofersRating.setReviewText(entity.getReviewText());
         return koofersRating;

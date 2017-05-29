@@ -23,7 +23,7 @@ import java.util.List;
 @RequestMapping("/api/koofers")
 public class KoofersController {
 
-    private Logger log = Logger.getLogger(RMPController.class);
+    private Logger log = Logger.getLogger(KoofersController.class);
 
     @Autowired
     private KoofersProfessorDB professorDB;
@@ -34,7 +34,7 @@ public class KoofersController {
     @RequestMapping(method = RequestMethod.GET, path = "/scrape")
     public @ResponseBody
     List<KoofersProfessorDTO> scrape(@RequestParam(value = "name") String name, @RequestParam(value = "school") String school) {
-        log.info("RMP scrape request: " + name + " " + school);
+        log.info("Koofers scrape request: " + name + " " + school);
         KoofersWebScraper scraper = new KoofersWebScraper(name, school);
         try {
             List<KoofersProfessorDTO> results = scraper.fetch();
@@ -49,7 +49,7 @@ public class KoofersController {
     @RequestMapping(method = RequestMethod.GET, path = "/rating")
     public @ResponseBody
     List<KoofersRatingDTO> rating(@RequestParam(value = "professorId") Integer professorId) {
-        log.info("RMP Review request: " + professorId);
+        log.info("Koofers Review request: " + professorId);
         return ratingDB.getRatings(professorId);
     }
 
@@ -57,7 +57,7 @@ public class KoofersController {
     public @ResponseBody
     List<KoofersProfessorDTO> professor(@RequestParam(value = "name") String name,
                                         @RequestParam(value = "school") String school) {
-        log.info("RMP Professor request: " + name + ", " + school);
+        log.info("Koofers Professor request: " + name + ", " + school);
         List<KoofersProfessorDTO> allByNameAndSchool = professorDB.getProfessorsByNameAndSchool(name, school);
         if (allByNameAndSchool.size() > 0) {
             log.info("Found professor info on DB, using cached results: " + allByNameAndSchool.toString());
